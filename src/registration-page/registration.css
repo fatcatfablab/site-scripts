@@ -1,0 +1,39 @@
+#fcfl-events > ul {
+  list-style-type: none;
+}
+
+#fcfl-events .event-content {
+  display: flex;
+}
+
+@media (min-width: 856px) {
+  #fcfl-events img {
+    max-width: 250px;
+  }
+
+  #fcfl-events .event-content {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 855px) {
+  #fcfl-events .event-content {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 60px;
+  }
+
+  #fcfl-events img {
+    margin-top: 24px;
+    max-width: 90%;
+  }
+}
+
+#fcfl-events .price {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+#fcfl-events li {
+  margin-bottom: 24px;
+}
