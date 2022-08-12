@@ -1,7 +1,10 @@
 (() => {
   const date = (d) => {
     d = new Date(d);
-    return `${d.toLocaleDateString()} at ${d.toLocaleTimeString()}`;
+    return new Intl.DateTimeFormat("en-US", {
+      dateStyle: "full",
+      timeStyle: "short",
+    }).format(d);
   };
 
   const groupBy = (obj, key) =>
@@ -36,8 +39,6 @@
   function renderEvent([hash, occurrences]) {
     const { title, description, photos, price, ...otherDetails } =
       occurrences[0];
-
-    console.log(otherDetails);
 
     return `
     <li>
