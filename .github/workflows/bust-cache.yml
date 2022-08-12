@@ -1,0 +1,15 @@
+name: Bust cache
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  purge-jsdelivr-cache:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: gacts/purge-jsdelivr-cache@v1
+        with:
+          url: |
+            https://cdn.jsdelivr.net/gh/fatcatfablab/site-scripts/src/events.js
+            https://cdn.jsdelivr.net/gh/fatcatfablab/site-scripts/src/events.css
