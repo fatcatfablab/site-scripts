@@ -1,10 +1,9 @@
 (() => {
   const date = (d) => {
-    d = new Date(d);
     return new Intl.DateTimeFormat("en-US", {
       dateStyle: "full",
       timeStyle: "short",
-    }).format(d);
+    }).format(new Date(d).DateTimeFormat);
   };
 
   const groupBy = (obj, key) =>

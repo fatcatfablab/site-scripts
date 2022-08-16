@@ -35,5 +35,9 @@
 }
 
 #fcfl-events li {
-  margin-bottom: 24px;
+  margin-bottom: 50px;
+}
+
+#fcfl-events h2 {
+  font-weight: 500;
 }
