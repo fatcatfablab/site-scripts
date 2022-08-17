@@ -3,7 +3,7 @@
     return new Intl.DateTimeFormat("en-US", {
       dateStyle: "full",
       timeStyle: "short",
-    }).format(new Date(d).DateTimeFormat);
+    }).format(new Date(d.replace(/-/g, "/")));
   };
 
   const groupBy = (obj, key) =>

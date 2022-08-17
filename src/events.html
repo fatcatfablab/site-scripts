@@ -1,6 +1,23 @@
 <!--
 This file is mostly just for testing. If you open it up locally you can make changes to the events.js, events.css
 -->
-<script src="./events.js"></script>
+<!-- <script>
+    fetch("https://api.github.com/repos/fatcatfablab/site-scripts/commits?per_page=1")
+        .then(res => res.json())
+        .then(data => data[0].sha)
+        .then(sha => {
+            const styles = document.createElement('link')
+            styles.rel = "stylesheet"
+            styles.href = `https://cdn.jsdelivr.net/gh/fatcatfablab/site-scripts@${sha}/src/events.css`
+            document.head.appendChild(styles)
+
+            const script = document.createElement('script')
+            script.type = "text/javascript"
+            script.src = `https://cdn.jsdelivr.net/gh/fatcatfablab/site-scripts@${sha}/src/events.js`
+            document.head.appendChild(script)
+        })
+        .catch(err => console.error(err))
+</script> -->
 <link rel="stylesheet" href="./events.css" />
+<script src="./events.js"></script>
 <div id="fcfl-events"></div>
