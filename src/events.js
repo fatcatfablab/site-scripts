@@ -39,6 +39,8 @@
     const { title, description, photos, price, ...otherDetails } =
       occurrences[0];
 
+    const events = occurrences.filter((e) => e.seats_remaining > 0);
+
     return `
     <li>
       <h2>${title}</h2>
@@ -46,22 +48,24 @@
         <div>
           <span>${description.trim()}</span>
           <span class="price">$${price}</span>
-          <form onsubmit="return navToRegistration(event)">
-            <select name="event-url">
-            ${occurrences
-              .filter((e) => e.seats_remaining > 0)
-              .map(
-                (event) => `
-              <option value="${event.registration_url}">${date(
-                  event.start_date
-                )} (${event.seats_remaining} of ${
-                  event.max_participants
-                } seats remaining)</option>
-            `
-              )}
-            </select>
-            <button type="submit">Register</button>
-          </form>
+          ${
+            events.length > 0
+              ? `
+                <form onsubmit="return navToRegistration(event)">
+                  <select name="event-url">
+                  ${events.map(
+                    (event) => `
+                    <option value="${event.registration_url}">${date(
+                      event.start_date
+                    )} (${event.seats_remaining} of ${
+                      event.max_participants
+                    } seats remaining)</option>`
+                  )}
+                  </select>
+                  <button type="submit">Register</button>
+                </form>`
+              : `<div><b>Class Full</b></div>`
+          }
         </div>
         <img src="${photos?.[0]}" onerror="this.parentNode.removeChild(this)"/>
       </div>
