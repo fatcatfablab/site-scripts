@@ -9,6 +9,7 @@
 @media (min-width: 856px) {
   #fcfl-events img {
     max-width: 250px;
+    object-fit: cover;
   }
 
   #fcfl-events .event-content {
@@ -26,6 +27,7 @@
   #fcfl-events img {
     margin-top: 24px;
     max-width: 90%;
+    object-fit: cover;
   }
 }
 
