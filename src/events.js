@@ -39,7 +39,7 @@
     const { title, description, photos, price, ...otherDetails } =
       occurrences[0];
 
-    const events = occurrences.filter((e) => e.seats_remaining > 0);
+    const events = occurrences.filter((e) => e.seats_remaining >= 0);
 
     return `
     <li>
