@@ -3,7 +3,6 @@
     return new Intl.DateTimeFormat("en-US", {
       dateStyle: "full",
       timeStyle: "short",
-      hour: "numeric",
     }).format(new Date(d.replace(/-/g, "/")));
   };
 
