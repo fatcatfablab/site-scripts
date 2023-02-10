@@ -57,7 +57,7 @@
                     (event) => `
                     <option value="${event.registration_url}">${date(
                       event.start_date
-                    ).split(", ")[0]} at ${date(event.start_date).split(", ")[1]} - ${date(event.end_date).split(", ")[1]} (${event.seats_remaining} of ${
+                    )} (${event.seats_remaining} of ${
                       event.max_participants
                     } seats remaining)</option>`
                   )}
