@@ -3,7 +3,7 @@
     return new Intl.DateTimeFormat("en-US", {
       dateStyle: "full",
       timeStyle: "short",
-    },{hour: "numeric"}).format(new Date(d.replace(/-/g, "/")));
+    }).format(new Date(d.replace(/-/g, "/")));
   };
 
   const groupBy = (obj, key) =>
@@ -57,7 +57,7 @@
                     (event) => `
                     <option value="${event.registration_url}">${date(
                       event.start_date
-                    )} - ${date(event.end_date, {hour: "numeric"})} (${event.seats_remaining} of ${
+                    )} (${event.seats_remaining} of ${
                       event.max_participants
                     } seats remaining)</option>`
                   )}
