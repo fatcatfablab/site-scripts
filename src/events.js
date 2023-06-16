@@ -1,8 +1,12 @@
 (() => {
   const date = (d) => {
     return new Intl.DateTimeFormat("en-US", {
-      dateStyle: "full",
-      timeStyle: "short",
+      weekday: "short",
+      year: "2-digit",
+      month: "numeric",
+      day: "2-digit",
+      hour: "numeric",
+      minute: "2-digit"
     }).format(new Date(d.replace(/-/g, "/")));
   };
 
