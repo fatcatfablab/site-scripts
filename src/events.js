@@ -43,7 +43,7 @@
     const { title, description, photos, price, ...otherDetails } =
       occurrences[0];
 
-    const events = occurrences.filter((e) => e.seats_remaining >= 0);
+    const events = occurrences.filter((e) => e.seats_left >= 0);
 
     return `
     <li>
@@ -61,9 +61,9 @@
                     (event) => `
                     <option value="${event.registration_url}">${date(
                       event.start_date
-                    )} (${event.seats_remaining} of ${
+                    )} (${event.seats_left} of ${
                       event.max_participants
-                    } seats remaining)</option>`
+                    } seats left)</option>`
                   )}
                   </select>
                   <button type="submit">Register</button>
