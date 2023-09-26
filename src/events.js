@@ -50,7 +50,7 @@
       <h2>${title}</h2>
       <div class="event-content">
         <div>
-          <span>${description.trim()}</span>
+          <span>${description?.trim()}</span>
           <span class="price">$${price}</span>
           ${
             events.length > 0
