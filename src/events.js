@@ -51,7 +51,7 @@
       <div class="event-content">
         <div>
           <span>${description?.trim()}</span>
-          <span class="price">$${price}</span>
+          <span class="price">${price ? `$${price}` || "FREE"}</span>
           ${
             events.length > 0
               ? `
