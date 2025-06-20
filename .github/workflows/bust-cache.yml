@@ -13,3 +13,4 @@ jobs:
           url: |
             https://cdn.jsdelivr.net/gh/fatcatfablab/site-scripts/src/events.js
             https://cdn.jsdelivr.net/gh/fatcatfablab/site-scripts/src/events.css
+            https://cdn.jsdelivr.net/gh/fatcatfablab/site-scripts/src/fcfl-squarespace-stripe-email-form.js
